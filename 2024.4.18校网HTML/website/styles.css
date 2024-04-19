@@ -1,0 +1,177 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* 添加加载动画 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 应用加载动画到所有段落 */
+p {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 添加点击动画 */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 应用点击动画到所有section */
+section {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* 添加过渡效果 */
+    position: relative; /* 添加相对定位 */
+}
+
+
+
+/* 头部样式 */
+header {
+    background-color: rgba(0, 123, 255, 0.5); /* 半透明蓝色为主题色 */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影效果 */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out; /* 颜色过渡效果 */
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* 悬停时的颜色 */
+}
+
+nav ul li a:hover{
+    color: #007bff;
+    hanging-punctuation: 30px;
+}
+
+/* 主要内容区样式 */
+section {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(248, 249, 250, 0.7); /* 蓝色磨砂效果 */
+    margin-bottom: 20px;
+    position: relative; /* 相对定位 */
+}
+
+/* 标题样式 */
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* 链接样式 */
+a {
+    color: #007bff; /* 蓝色为主题色 */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* 颜色过渡效果 */
+}
+
+a:hover {
+    color: #0056b3; /* 悬停时颜色略微变深 */
+}
+
+/* 段落样式 */
+p{
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8); /* 字体半透明 */
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* 颜色过渡效果 */
+}
+p:hover {
+    color: #171717; /* 悬停时的颜色 */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.draggable {
+    width: 200px; /* 缩小宽度 */
+    height: 300px; /* 缩小高度 */
+    border: 2px solid rgba(204, 204, 204, 0.8); /* 边框颜色和透明度 */
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 200x; /* 初始位置在页面顶部附近 */
+    right: 50px; /* 初始位置在页面右侧 */
+    background-color: rgba(249, 249, 249, 0.8); /* 背景颜色和透明度 */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: move;
+    opacity: 0.8; /* 设置透明度 */
+}
+
+.draggable textarea {
+    width: 90%;
+    height: 70%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+.draggable button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.draggable button:hover {
+    background-color: #0056b3;
+}
+
+#chat_response {
+    height: 20%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+}

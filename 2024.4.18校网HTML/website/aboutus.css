@@ -1,0 +1,68 @@
+body, h1, h2, p, footer {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Basic body styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  h1 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Sub-header styles */
+  h2 {
+    color: #0056b3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph styles */
+  p {
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+  }
+  
+  /* Link styles */
+  a {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Us section */
+  h2#contact {
+    margin-top: 40px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    h1, h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }

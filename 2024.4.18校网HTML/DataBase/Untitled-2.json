@@ -1,0 +1,20 @@
+{
+    "questions": {
+        "Id": {
+            "question": "What is the full name of Entel",
+            "answer": "The full name of Entel is Hangzhou Entel Foriegn Language School",
+            "date": "2024/4/18 12:11",
+            "tags": ["Aboutus", "Name"]
+        },
+        "Id2": {
+            "question": "Who made this website?",
+            "answer": "US from the PBL project",
+            "date": "2024/4/18 12:17",
+            "tags": ["Aboutus", "PBL", "project"]
+        }
+    }
+    
+        }
+    
+
+

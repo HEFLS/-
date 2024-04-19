@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生自制校网</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>杭州英特外国语学校</h1>
+        <nav>
+            <ul>
+                <li><a href="aboutus.html" class="nav-link">关于我们</a></li>
+                <li><a href="class.html" class="nav-link">课程</a></li>
+                <li><a href="#contact.html" class="nav-link">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>关于我们</h2>
+        <p>这里写上学校的简介和特色</p>
+    </section>
+
+    <section id="courses">
+        <h2>我们的课程</h2>
+        <p><a href="#中德方向">中德方向</a></li>
+        <p><a href="#中澳方向">中澳方向</a></li>
+        <p><a href="#英美方向">英美方向</a></li>
+        <p><a href="#中日方向">中日方向</a></li>
+    </section>
+    
+    <section id="contact">
+        <h2>联系我们</h2>
+        <p>学校的联系信息...</p>
+    </section>
+
+    </body>
+    <div id="chatbox" class="draggable">
+        <textarea id="user_input" placeholder="请在此输入问题，与我们AI机器人对话"></textarea>
+        <button onclick="sendMessage()">Send</button>
+        <div id="chat_response"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- script脚本 -->
+    <script src="sidebar.js"></script>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+<script>
+        function sendMessage() {
+}
+
+
+let dragItem = document.querySelector(".draggable");
+let active = false;
+let currentX;
+let currentY;
+let initialX;
+let initialY;
+let xOffset = 0;
+let yOffset = 0;
+
+dragItem.addEventListener("mousedown", dragStart, false);
+window.addEventListener("mouseup", dragEnd, false);
+window.addEventListener("mousemove", drag, false);
+
+function dragStart(e) {
+    if (e.type === "mousedown") {
+        active = true;
+        // Get the mouse cursor position at startup:
+        initialX = e.clientX;
+        initialY = e.clientY;
+    }
+}
+
+function dragEnd(e) {
+    initialX = currentX;
+    initialY = currentY;
+    active = false;
+}
+
+function drag(e) {
+    if (active) {
+        e.preventDefault();
+        currentX = e.clientX;
+        currentY = e.clientY;
+        xOffset = currentX - initialX;
+        yOffset = currentY - initialY;
+        initialX = currentX;
+        initialY = currentY;
+        dragItem.style.top = (dragItem.offsetTop + yOffset) + "px";
+        dragItem.style.left = (dragItem.offsetLeft + xOffset) + "px";
+    }
+}
+</script>
+
+</body>
+</html>
