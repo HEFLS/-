@@ -1,0 +1,99 @@
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+/* 添加加载动画 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+p {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 头部样式 */
+header {
+    background-color: rgba(0, 123, 255, 0.5); /* 半透明蓝色为主题色 */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影效果 */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out; /* 颜色过渡效果 */
+}
+
+nav ul li a:hover{
+    color: #007bff;
+    hanging-punctuation: 30px;
+}
+/* 主要内容区样式 */
+section {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(248, 249, 250, 0.7); /* 蓝色磨砂效果 */
+    margin-bottom: 20px;
+    position: relative; /* 相对定位 */
+}
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+a:hover,p:hover{
+    color: #0056b3; /* 悬停时颜色略微变深 */
+}
+a,p{
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #007bff; 
+    margin-bottom: 20px;
+    transition: color 0.5s ease-in-out; /* 颜色过渡效果 */
+    text-decoration: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.slideshow {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    opacity: 0.8;
+    display: none;
+    width: 100%; /* 图片宽度占据整个容器 */
+    height: 80%; /* 高度自适应 */
+    object-fit: cover; /* 保持图片比例，填充整个容器 */
+}
